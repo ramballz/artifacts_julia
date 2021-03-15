@@ -1,0 +1,760 @@
+BinaryBuilder.jl version: 0.2.4-tree-585c625152
+
+`/bin/bash -l -c 'set -x
+cc --version
+c++ --version
+gcc --version
+g++ --version
+clang --version
+clang++ --version
+objc --version
+f77 --version
+gfortran --version
+ld -v
+'`
+x86_64-w64-mingw32-gcc (GCC) 4.8.5
+Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+x86_64-w64-mingw32-g++ (GCC) 4.8.5
+Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+x86_64-w64-mingw32-gcc (GCC) 4.8.5
+Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+x86_64-w64-mingw32-g++ (GCC) 4.8.5
+Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+verbose sandbox enabled (running in privileged container mode)
+Parsed --rootfs as "/depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b"
+Parsed --cd as "/workspace/srcdir"
+Parsed --workspace as "/agent/_work/1/s/P/PCRE/build/x86_64-w64-mingw32/r4pjzPIA" -> "/workspace"
+Parsed --workspace as "/agent/_work/1/s/P/PCRE/build/x86_64-w64-mingw32/r4pjzPIA/metadir" -> "/meta"
+Parsed --workspace as "/tmp/jl_womuiy" -> "/opt/bin"
+Parsed --workspace as "/depot/ccache" -> "/root/.ccache"
+Parsed --map as "/depot/artifacts/38b192b1c0ce5975001efbe447cc3103d3adb518" -> "/opt/x86_64-w64-mingw32/PlatformSupport-2020.2.7"
+Parsed --map as "/depot/artifacts/70945a06a67cd2993da453bfb8db7848b6bc1bc4" -> "/opt/x86_64-w64-mingw32/GCCBootstrap-4.8.5"
+Parsed --map as "/depot/artifacts/35dc5ddb1b3037f449fee5771b6c12ebcc4350b8" -> "/opt/x86_64-linux-musl/LLVMBootstrap-9.0.1"
+Parsed --map as "/depot/artifacts/1a9bb425a2d8d6e56e4b68078e9d74e228daad18" -> "/opt/x86_64-linux-musl/PlatformSupport-2020.2.7"
+Parsed --map as "/depot/artifacts/2e6f62648ec0497cc25774aa175471ad41b6172a" -> "/opt/x86_64-linux-musl/GCCBootstrap-4.8.5"
+--> Creating overlay workdir at /proc
+--> Mounting overlay of /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b (modifications in /proc/upper/rootfs, workspace in /proc/work/rootfs)
+--> mapping /depot/artifacts/2e6f62648ec0497cc25774aa175471ad41b6172a to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/GCCBootstrap-4.8.5
+--> mapping /depot/artifacts/1a9bb425a2d8d6e56e4b68078e9d74e228daad18 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/PlatformSupport-2020.2.7
+--> mapping /depot/artifacts/35dc5ddb1b3037f449fee5771b6c12ebcc4350b8 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/LLVMBootstrap-9.0.1
+--> mapping /depot/artifacts/70945a06a67cd2993da453bfb8db7848b6bc1bc4 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-w64-mingw32/GCCBootstrap-4.8.5
+--> mapping /depot/artifacts/38b192b1c0ce5975001efbe447cc3103d3adb518 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-w64-mingw32/PlatformSupport-2020.2.7
+--> Mounting overlay of /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-w64-mingw32/PlatformSupport-2020.2.7:/depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-w64-mingw32/GCCBootstrap-4.8.5 at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-w64-mingw32 (modifications in /proc/upper/x86_64-w64-mingw32, workspace in /proc/work/x86_64-w64-mingw32)
+--> Mounting overlay of /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/LLVMBootstrap-9.0.1:/depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/PlatformSupport-2020.2.7:/depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/GCCBootstrap-4.8.5 at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl (modifications in /proc/upper/x86_64-linux-musl, workspace in /proc/work/x86_64-linux-musl)
+--> Mounting procfs at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/proc
+--> Mounting /dev/null at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/dev/null
+--> Mounting /dev/tty at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/dev/tty
+--> Mounting /dev/urandom at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/dev/urandom
+--> workspacing /depot/ccache to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/root/.ccache
+--> workspacing /tmp/jl_womuiy to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/bin
+--> workspacing /agent/_work/1/s/P/PCRE/build/x86_64-w64-mingw32/r4pjzPIA/metadir to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/meta
+--> workspacing /agent/_work/1/s/P/PCRE/build/x86_64-w64-mingw32/r4pjzPIA to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/workspace
+--> Mounting procfs at /proc
+Child Process PID is 39000
+--> Mapping 0:0 to root:root within container namespace
+--> Mounting procfs at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/proc
+About to run `/bin/bash` `-l` `-c` `set -x
+cc --version
+c++ --version
+gcc --version
+g++ --version
+clang --version
+clang++ --version
+objc --version
+f77 --version
+gfortran --version
+ld -v
+` 
++ cc --version
++ c++ --version
++ gcc --version
++ g++ --version
++ clang --version
+clang version 9.0.1 (/home/staticfloat/.julia/dev/BinaryBuilder/deps/downloads/llvm-project.git c1a0a213378a458fbea1a5c77b315c7dce08fd05)
+Target: x86_64-w64-windows-gnu
+Thread model: posix
+InstalledDir: /opt/x86_64-linux-musl/bin
++ clang++ --version
+clang version 9.0.1 (/home/staticfloat/.julia/dev/BinaryBuilder/deps/downloads/llvm-project.git c1a0a213378a458fbea1a5c77b315c7dce08fd05)
+Target: x86_64-w64-windows-gnu
+Thread model: posix
+InstalledDir: /opt/x86_64-linux-musl/bin
++ objc --version
+clang version 9.0.1 (/home/staticfloat/.julia/dev/BinaryBuilder/deps/downloads/llvm-project.git c1a0a213378a458fbea1a5c77b315c7dce08fd05)
+Target: x86_64-w64-windows-gnu
+Thread model: posix
+InstalledDir: /opt/x86_64-linux-musl/bin
++ f77 --version
+GNU Fortran (GCC) 4.8.5
+Copyright (C) 2015 Free Software Foundation, Inc.
+
+GNU Fortran comes with NO WARRANTY, to the extent permitted by law.
+You may redistribute copies of GNU Fortran
+under the terms of the GNU General Public License.
+For more information about these matters, see the file named COPYING
+
++ gfortran --version
+GNU Fortran (GCC) 4.8.5
+Copyright (C) 2015 Free Software Foundation, Inc.
+
+GNU Fortran comes with NO WARRANTY, to the extent permitted by law.
+You may redistribute copies of GNU Fortran
+under the terms of the GNU General Public License.
+For more information about these matters, see the file named COPYING
+
++ ld -v
+GNU ld (GNU Binutils) 2.24
+Child Process exited, exit code 0
+`/bin/bash -l -c "# Stop if we hit any errors.
+set -e
+
+# If we're running as \`bash\`, then use the \`DEBUG\` and \`ERR\` traps
+if [ \$(basename \$0) = \"bash\" ]; then
+    trap \"trap - DEBUG INT TERM ERR EXIT; \
+          set +e +x; \
+          auto_install_license; \
+          save_env\" \
+        EXIT
+
+    trap \"RET=\\$?; \
+          trap - DEBUG INT TERM ERR EXIT; \
+          set +e +x; \
+          echo Previous command \\$! exited with \\$RET >&2; \
+          save_env; \
+          exit \\$RET\" \
+        INT TERM ERR
+
+    # Start saving everything into our history
+    trap save_history DEBUG
+else
+    # If we're running in \`sh\` or something like that, we need a
+    # slightly slimmer set of traps. :(
+    trap \"RET=\\$?; \
+          echo Previous command exited with \\$RET >&2; \
+          set +e +x; \
+          save_env; \
+          exit \\$RET\" \
+        EXIT INT TERM
+fi
+
+cd \$WORKSPACE/srcdir/pcre-*/
+./configure --prefix=\$prefix --host=\$target --enable-utf8 --enable-unicode-properties
+make -j\${nproc} VERBOSE=1
+make install VERBOSE=1
+
+"`
+verbose sandbox enabled (running in privileged container mode)
+Parsed --rootfs as "/depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b"
+Parsed --cd as "/workspace/srcdir"
+Parsed --workspace as "/agent/_work/1/s/P/PCRE/build/x86_64-w64-mingw32/r4pjzPIA" -> "/workspace"
+Parsed --workspace as "/agent/_work/1/s/P/PCRE/build/x86_64-w64-mingw32/r4pjzPIA/metadir" -> "/meta"
+Parsed --workspace as "/tmp/jl_womuiy" -> "/opt/bin"
+Parsed --workspace as "/depot/ccache" -> "/root/.ccache"
+Parsed --map as "/depot/artifacts/38b192b1c0ce5975001efbe447cc3103d3adb518" -> "/opt/x86_64-w64-mingw32/PlatformSupport-2020.2.7"
+Parsed --map as "/depot/artifacts/70945a06a67cd2993da453bfb8db7848b6bc1bc4" -> "/opt/x86_64-w64-mingw32/GCCBootstrap-4.8.5"
+Parsed --map as "/depot/artifacts/35dc5ddb1b3037f449fee5771b6c12ebcc4350b8" -> "/opt/x86_64-linux-musl/LLVMBootstrap-9.0.1"
+Parsed --map as "/depot/artifacts/1a9bb425a2d8d6e56e4b68078e9d74e228daad18" -> "/opt/x86_64-linux-musl/PlatformSupport-2020.2.7"
+Parsed --map as "/depot/artifacts/2e6f62648ec0497cc25774aa175471ad41b6172a" -> "/opt/x86_64-linux-musl/GCCBootstrap-4.8.5"
+--> Creating overlay workdir at /proc
+--> Mounting overlay of /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b (modifications in /proc/upper/rootfs, workspace in /proc/work/rootfs)
+--> mapping /depot/artifacts/2e6f62648ec0497cc25774aa175471ad41b6172a to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/GCCBootstrap-4.8.5
+--> mapping /depot/artifacts/1a9bb425a2d8d6e56e4b68078e9d74e228daad18 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/PlatformSupport-2020.2.7
+--> mapping /depot/artifacts/35dc5ddb1b3037f449fee5771b6c12ebcc4350b8 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/LLVMBootstrap-9.0.1
+--> mapping /depot/artifacts/70945a06a67cd2993da453bfb8db7848b6bc1bc4 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-w64-mingw32/GCCBootstrap-4.8.5
+--> mapping /depot/artifacts/38b192b1c0ce5975001efbe447cc3103d3adb518 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-w64-mingw32/PlatformSupport-2020.2.7
+--> Mounting overlay of /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-w64-mingw32/PlatformSupport-2020.2.7:/depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-w64-mingw32/GCCBootstrap-4.8.5 at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-w64-mingw32 (modifications in /proc/upper/x86_64-w64-mingw32, workspace in /proc/work/x86_64-w64-mingw32)
+--> Mounting overlay of /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/LLVMBootstrap-9.0.1:/depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/PlatformSupport-2020.2.7:/depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/GCCBootstrap-4.8.5 at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl (modifications in /proc/upper/x86_64-linux-musl, workspace in /proc/work/x86_64-linux-musl)
+--> Mounting procfs at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/proc
+--> Mounting /dev/null at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/dev/null
+--> Mounting /dev/tty at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/dev/tty
+--> Mounting /dev/urandom at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/dev/urandom
+--> workspacing /depot/ccache to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/root/.ccache
+--> workspacing /tmp/jl_womuiy to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/bin
+--> workspacing /agent/_work/1/s/P/PCRE/build/x86_64-w64-mingw32/r4pjzPIA/metadir to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/meta
+--> workspacing /agent/_work/1/s/P/PCRE/build/x86_64-w64-mingw32/r4pjzPIA to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/workspace
+--> Mounting procfs at /proc
+Child Process PID is 39060
+--> Mapping 0:0 to root:root within container namespace
+--> Mounting procfs at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/proc
+About to run `/bin/bash` `-l` `-c` `# Stop if we hit any errors.
+set -e
+
+# If we're running as `bash`, then use the `DEBUG` and `ERR` traps
+if [ $(basename $0) = "bash" ]; then
+    trap "trap - DEBUG INT TERM ERR EXIT; \
+          set +e +x; \
+          auto_install_license; \
+          save_env" \
+        EXIT
+
+    trap "RET=\$?; \
+          trap - DEBUG INT TERM ERR EXIT; \
+          set +e +x; \
+          echo Previous command \$! exited with \$RET >&2; \
+          save_env; \
+          exit \$RET" \
+        INT TERM ERR
+
+    # Start saving everything into our history
+    trap save_history DEBUG
+else
+    # If we're running in `sh` or something like that, we need a
+    # slightly slimmer set of traps. :(
+    trap "RET=\$?; \
+          echo Previous command exited with \$RET >&2; \
+          set +e +x; \
+          save_env; \
+          exit \$RET" \
+        EXIT INT TERM
+fi
+
+cd $WORKSPACE/srcdir/pcre-*/
+./configure --prefix=$prefix --host=$target --enable-utf8 --enable-unicode-properties
+make -j${nproc} VERBOSE=1
+make install VERBOSE=1
+
+` 
+ ---> cd $WORKSPACE/srcdir/pcre-*/
+ ---> ./configure --prefix=$prefix --host=$target --enable-utf8 --enable-unicode-properties
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for x86_64-w64-mingw32-strip... x86_64-w64-mingw32-strip
+checking for a thread-safe mkdir -p... ./install-sh -c -d
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether make supports nested variables... (cached) yes
+checking for style of include used by make... GNU
+checking for x86_64-w64-mingw32-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.exe
+checking for suffix of executables... .exe
+checking whether we are cross compiling... yes
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether cc accepts -g... yes
+checking for cc option to accept ISO C89... none needed
+checking whether cc understands -c and -o together... yes
+checking dependency style of cc... gcc3
+checking for x86_64-w64-mingw32-ar... x86_64-w64-mingw32-ar
+checking the archiver (x86_64-w64-mingw32-ar) interface... ar
+checking for x86_64-w64-mingw32-gcc... (cached) cc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether cc accepts -g... (cached) yes
+checking for cc option to accept ISO C89... (cached) none needed
+checking whether cc understands -c and -o together... (cached) yes
+checking dependency style of cc... (cached) gcc3
+checking whether we are using the GNU C++ compiler... yes
+checking whether c++ accepts -g... yes
+checking dependency style of c++... gcc3
+checking how to run the C preprocessor... cc -E
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for int64_t... yes
+checking build system type... x86_64-pc-msys
+checking host system type... x86_64-w64-mingw32
+checking for x86_64-w64-mingw32-as... x86_64-w64-mingw32-as
+checking for x86_64-w64-mingw32-dlltool... x86_64-w64-mingw32-dlltool
+checking for x86_64-w64-mingw32-objdump... x86_64-w64-mingw32-objdump
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for fgrep... /bin/grep -F
+checking for ld used by cc... /opt/x86_64-w64-mingw32/x86_64-w64-mingw32/bin/ld
+checking if the linker (/opt/x86_64-w64-mingw32/x86_64-w64-mingw32/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /opt/bin/x86_64-w64-mingw32-nm -B
+checking the name lister (/opt/bin/x86_64-w64-mingw32-nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 98304
+checking how to convert x86_64-pc-msys file names to x86_64-w64-mingw32 format... func_convert_file_nix_to_w32
+checking how to convert x86_64-pc-msys file names to toolchain format... func_convert_file_noop
+checking for /opt/x86_64-w64-mingw32/x86_64-w64-mingw32/bin/ld option to reload object files... -r
+checking for x86_64-w64-mingw32-objdump... (cached) x86_64-w64-mingw32-objdump
+checking how to recognize dependent libraries... file_magic ^x86 archive import|^x86 DLL
+checking for x86_64-w64-mingw32-dlltool... (cached) x86_64-w64-mingw32-dlltool
+checking how to associate runtime and link libraries... func_cygming_dll_for_implib
+checking for x86_64-w64-mingw32-ar... (cached) x86_64-w64-mingw32-ar
+checking for archiver @FILE support... @
+checking for x86_64-w64-mingw32-strip... (cached) x86_64-w64-mingw32-strip
+checking for x86_64-w64-mingw32-ranlib... x86_64-w64-mingw32-ranlib
+checking command to parse /opt/bin/x86_64-w64-mingw32-nm -B output from cc object... ok
+checking for sysroot... no
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for x86_64-w64-mingw32-mt... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for dlfcn.h... no
+checking for objdir... .libs
+checking if cc supports -fno-rtti -fno-exceptions... no
+checking for cc option to produce PIC... -DDLL_EXPORT -DPIC
+checking if cc PIC flag -DDLL_EXPORT -DPIC works... yes
+checking if cc static flag -static works... yes
+checking if cc supports -c -o file.o... yes
+checking if cc supports -c -o file.o... (cached) yes
+checking whether the cc linker (/opt/x86_64-w64-mingw32/x86_64-w64-mingw32/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... yes
+checking dynamic linker characteristics... Win32 ld.exe
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking how to run the C++ preprocessor... c++ -E
+checking for ld used by c++... /opt/x86_64-w64-mingw32/x86_64-w64-mingw32/bin/ld
+checking if the linker (/opt/x86_64-w64-mingw32/x86_64-w64-mingw32/bin/ld) is GNU ld... yes
+checking whether the c++ linker (/opt/x86_64-w64-mingw32/x86_64-w64-mingw32/bin/ld) supports shared libraries... yes
+checking for c++ option to produce PIC... -DDLL_EXPORT -DPIC
+checking if c++ PIC flag -DDLL_EXPORT -DPIC works... yes
+checking if c++ static flag -static works... yes
+checking if c++ supports -c -o file.o... yes
+checking if c++ supports -c -o file.o... (cached) yes
+checking whether the c++ linker (/opt/x86_64-w64-mingw32/x86_64-w64-mingw32/bin/ld) supports shared libraries... yes
+checking dynamic linker characteristics... Win32 ld.exe
+checking how to hardcode library paths into programs... immediate
+checking whether ln -s works... yes
+checking whether the -Werror option is usable... yes
+checking for simple visibility declarations... yes
+checking for ANSI C header files... (cached) yes
+checking limits.h usability... yes
+checking limits.h presence... yes
+checking for limits.h... yes
+checking for sys/types.h... (cached) yes
+checking for sys/stat.h... (cached) yes
+checking dirent.h usability... yes
+checking dirent.h presence... yes
+checking for dirent.h... yes
+checking windows.h usability... yes
+checking windows.h presence... yes
+checking for windows.h... yes
+checking for alias support in the linker... no
+checking for alias support in the linker... no
+checking string usability... yes
+checking string presence... yes
+checking for string... yes
+checking bits/type_traits.h usability... no
+checking bits/type_traits.h presence... no
+checking for bits/type_traits.h... no
+checking type_traits.h usability... no
+checking type_traits.h presence... no
+checking for type_traits.h... no
+checking for strtoq... no
+checking for strtoll... yes
+checking for long long... yes
+checking for unsigned long long... yes
+checking for an ANSI C-conforming const... yes
+checking for size_t... yes
+checking for bcopy... no
+checking for memmove... yes
+checking for strerror... yes
+checking zlib.h usability... no
+checking zlib.h presence... no
+checking for zlib.h... no
+checking for gzopen in -lz... no
+checking bzlib.h usability... no
+checking bzlib.h presence... no
+checking for bzlib.h... no
+checking for libbz2... no
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating libpcre.pc
+config.status: creating libpcre16.pc
+config.status: creating libpcre32.pc
+config.status: creating libpcreposix.pc
+config.status: creating libpcrecpp.pc
+config.status: creating pcre-config
+config.status: creating pcre.h
+config.status: creating pcre_stringpiece.h
+config.status: creating pcrecpparg.h
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing script-chmod commands
+config.status: executing delete-old-chartables commands
+
+pcre-8.42 configuration summary:
+
+    Install prefix .................. : /workspace/destdir
+    C preprocessor .................. : cc -E
+    C compiler ...................... : cc
+    C++ preprocessor ................ : c++ -E
+    C++ compiler .................... : c++
+    Linker .......................... : /opt/x86_64-w64-mingw32/x86_64-w64-mingw32/bin/ld
+    C preprocessor flags ............ : 
+    C compiler flags ................ : -g -O2 -fvisibility=hidden
+    C++ compiler flags .............. : -O2 -fvisibility=hidden -fvisibility-inlines-hidden
+    Linker flags .................... : 
+    Extra libraries ................. : 
+
+    Build 8 bit pcre library ........ : yes
+    Build 16 bit pcre library ....... : no
+    Build 32 bit pcre library ....... : no
+    Build C++ library ............... : yes
+    Enable JIT compiling support .... : no
+    Enable UTF-8/16/32 support ...... : yes
+    Unicode properties .............. : yes
+    Newline char/sequence ........... : lf
+    \R matches only ANYCRLF ......... : no
+    EBCDIC coding ................... : no
+    EBCDIC code for NL .............. : n/a
+    Rebuild char tables ............. : no
+    Use stack recursion ............. : yes
+    POSIX mem threshold ............. : 10
+    Internal link size .............. : 2
+    Nested parentheses limit ........ : 250
+    Match limit ..................... : 10000000
+    Match limit recursion ........... : MATCH_LIMIT
+    Build shared libs ............... : yes
+    Build static libs ............... : yes
+    Use JIT in pcregrep ............. : no
+    Buffer size for pcregrep ........ : 20480
+    Link pcregrep with libz ......... : no
+    Link pcregrep with libbz2 ....... : no
+    Link pcretest with libedit ...... : no
+    Link pcretest with libreadline .. : no
+    Valgrind support ................ : no
+    Code coverage ................... : no
+
+ ---> make -j${nproc} VERBOSE=1
+rm -f pcre_chartables.c
+ln -s ./pcre_chartables.c.dist pcre_chartables.c
+make  all-am
+make[1]: Entering directory '/workspace/srcdir/pcre-8.42'
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I.    -fvisibility=hidden    -g -O2 -MT libpcre_la-pcre_byte_order.lo -MD -MP -MF .deps/libpcre_la-pcre_byte_order.Tpo -c -o libpcre_la-pcre_byte_order.lo `test -f 'pcre_byte_order.c' || echo './'`pcre_byte_order.c
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I.    -fvisibility=hidden    -g -O2 -MT libpcre_la-pcre_compile.lo -MD -MP -MF .deps/libpcre_la-pcre_compile.Tpo -c -o libpcre_la-pcre_compile.lo `test -f 'pcre_compile.c' || echo './'`pcre_compile.c
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I.    -fvisibility=hidden    -g -O2 -MT libpcre_la-pcre_config.lo -MD -MP -MF .deps/libpcre_la-pcre_config.Tpo -c -o libpcre_la-pcre_config.lo `test -f 'pcre_config.c' || echo './'`pcre_config.c
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I.    -fvisibility=hidden    -g -O2 -MT libpcre_la-pcre_dfa_exec.lo -MD -MP -MF .deps/libpcre_la-pcre_dfa_exec.Tpo -c -o libpcre_la-pcre_dfa_exec.lo `test -f 'pcre_dfa_exec.c' || echo './'`pcre_dfa_exec.c
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I.    -fvisibility=hidden    -g -O2 -MT libpcre_la-pcre_exec.lo -MD -MP -MF .deps/libpcre_la-pcre_exec.Tpo -c -o libpcre_la-pcre_exec.lo `test -f 'pcre_exec.c' || echo './'`pcre_exec.c
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I.    -fvisibility=hidden    -g -O2 -MT libpcre_la-pcre_fullinfo.lo -MD -MP -MF .deps/libpcre_la-pcre_fullinfo.Tpo -c -o libpcre_la-pcre_fullinfo.lo `test -f 'pcre_fullinfo.c' || echo './'`pcre_fullinfo.c
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I.    -fvisibility=hidden    -g -O2 -MT libpcre_la-pcre_get.lo -MD -MP -MF .deps/libpcre_la-pcre_get.Tpo -c -o libpcre_la-pcre_get.lo `test -f 'pcre_get.c' || echo './'`pcre_get.c
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I.    -fvisibility=hidden    -g -O2 -MT libpcre_la-pcre_globals.lo -MD -MP -MF .deps/libpcre_la-pcre_globals.Tpo -c -o libpcre_la-pcre_globals.lo `test -f 'pcre_globals.c' || echo './'`pcre_globals.c
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I.    -fvisibility=hidden    -g -O2 -MT libpcre_la-pcre_jit_compile.lo -MD -MP -MF .deps/libpcre_la-pcre_jit_compile.Tpo -c -o libpcre_la-pcre_jit_compile.lo `test -f 'pcre_jit_compile.c' || echo './'`pcre_jit_compile.c
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I.    -fvisibility=hidden    -g -O2 -MT libpcre_la-pcre_maketables.lo -MD -MP -MF .deps/libpcre_la-pcre_maketables.Tpo -c -o libpcre_la-pcre_maketables.lo `test -f 'pcre_maketables.c' || echo './'`pcre_maketables.c
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I.    -fvisibility=hidden    -g -O2 -MT libpcre_la-pcre_newline.lo -MD -MP -MF .deps/libpcre_la-pcre_newline.Tpo -c -o libpcre_la-pcre_newline.lo `test -f 'pcre_newline.c' || echo './'`pcre_newline.c
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I.    -fvisibility=hidden    -g -O2 -MT libpcre_la-pcre_ord2utf8.lo -MD -MP -MF .deps/libpcre_la-pcre_ord2utf8.Tpo -c -o libpcre_la-pcre_ord2utf8.lo `test -f 'pcre_ord2utf8.c' || echo './'`pcre_ord2utf8.c
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I.    -fvisibility=hidden    -g -O2 -MT libpcre_la-pcre_refcount.lo -MD -MP -MF .deps/libpcre_la-pcre_refcount.Tpo -c -o libpcre_la-pcre_refcount.lo `test -f 'pcre_refcount.c' || echo './'`pcre_refcount.c
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I.    -fvisibility=hidden    -g -O2 -MT libpcre_la-pcre_string_utils.lo -MD -MP -MF .deps/libpcre_la-pcre_string_utils.Tpo -c -o libpcre_la-pcre_string_utils.lo `test -f 'pcre_string_utils.c' || echo './'`pcre_string_utils.c
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I.    -fvisibility=hidden    -g -O2 -MT libpcre_la-pcre_study.lo -MD -MP -MF .deps/libpcre_la-pcre_study.Tpo -c -o libpcre_la-pcre_study.lo `test -f 'pcre_study.c' || echo './'`pcre_study.c
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I.    -fvisibility=hidden    -g -O2 -MT libpcre_la-pcre_tables.lo -MD -MP -MF .deps/libpcre_la-pcre_tables.Tpo -c -o libpcre_la-pcre_tables.lo `test -f 'pcre_tables.c' || echo './'`pcre_tables.c
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I.    -fvisibility=hidden    -g -O2 -MT libpcre_la-pcre_ucd.lo -MD -MP -MF .deps/libpcre_la-pcre_ucd.Tpo -c -o libpcre_la-pcre_ucd.lo `test -f 'pcre_ucd.c' || echo './'`pcre_ucd.c
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I.    -fvisibility=hidden    -g -O2 -MT libpcre_la-pcre_valid_utf8.lo -MD -MP -MF .deps/libpcre_la-pcre_valid_utf8.Tpo -c -o libpcre_la-pcre_valid_utf8.lo `test -f 'pcre_valid_utf8.c' || echo './'`pcre_valid_utf8.c
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I.    -fvisibility=hidden    -g -O2 -MT libpcre_la-pcre_version.lo -MD -MP -MF .deps/libpcre_la-pcre_version.Tpo -c -o libpcre_la-pcre_version.lo `test -f 'pcre_version.c' || echo './'`pcre_version.c
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I.    -fvisibility=hidden    -g -O2 -MT libpcre_la-pcre_xclass.lo -MD -MP -MF .deps/libpcre_la-pcre_xclass.Tpo -c -o libpcre_la-pcre_xclass.lo `test -f 'pcre_xclass.c' || echo './'`pcre_xclass.c
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I.    -fvisibility=hidden    -g -O2 -MT libpcre_la-pcre_chartables.lo -MD -MP -MF .deps/libpcre_la-pcre_chartables.Tpo -c -o libpcre_la-pcre_chartables.lo `test -f 'pcre_chartables.c' || echo './'`pcre_chartables.c
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I.    -fvisibility=hidden   -g -O2 -MT libpcreposix_la-pcreposix.lo -MD -MP -MF .deps/libpcreposix_la-pcreposix.Tpo -c -o libpcreposix_la-pcreposix.lo `test -f 'pcreposix.c' || echo './'`pcreposix.c
+/bin/sh ./libtool  --tag=CXX   --mode=compile c++ -DHAVE_CONFIG_H -I.    -fvisibility=hidden -fvisibility-inlines-hidden   -O2 -MT libpcrecpp_la-pcrecpp.lo -MD -MP -MF .deps/libpcrecpp_la-pcrecpp.Tpo -c -o libpcrecpp_la-pcrecpp.lo `test -f 'pcrecpp.cc' || echo './'`pcrecpp.cc
+/bin/sh ./libtool  --tag=CXX   --mode=compile c++ -DHAVE_CONFIG_H -I.    -fvisibility=hidden -fvisibility-inlines-hidden   -O2 -MT libpcrecpp_la-pcre_scanner.lo -MD -MP -MF .deps/libpcrecpp_la-pcre_scanner.Tpo -c -o libpcrecpp_la-pcre_scanner.lo `test -f 'pcre_scanner.cc' || echo './'`pcre_scanner.cc
+/bin/sh ./libtool  --tag=CXX   --mode=compile c++ -DHAVE_CONFIG_H -I.    -fvisibility=hidden -fvisibility-inlines-hidden   -O2 -MT libpcrecpp_la-pcre_stringpiece.lo -MD -MP -MF .deps/libpcrecpp_la-pcre_stringpiece.Tpo -c -o libpcrecpp_la-pcre_stringpiece.lo `test -f 'pcre_stringpiece.cc' || echo './'`pcre_stringpiece.cc
+cc -DHAVE_CONFIG_H -I.       -g -O2 -MT pcretest-pcretest.o -MD -MP -MF .deps/pcretest-pcretest.Tpo -c -o pcretest-pcretest.o `test -f 'pcretest.c' || echo './'`pcretest.c
+cc -DHAVE_CONFIG_H -I.       -g -O2 -MT pcretest-pcre_printint.o -MD -MP -MF .deps/pcretest-pcre_printint.Tpo -c -o pcretest-pcre_printint.o `test -f 'pcre_printint.c' || echo './'`pcre_printint.c
+cc -DHAVE_CONFIG_H -I.      -g -O2 -MT pcregrep-pcregrep.o -MD -MP -MF .deps/pcregrep-pcregrep.Tpo -c -o pcregrep-pcregrep.o `test -f 'pcregrep.c' || echo './'`pcregrep.c
+c++ -DHAVE_CONFIG_H -I.     -O2 -MT pcrecpp_unittest-pcrecpp_unittest.o -MD -MP -MF .deps/pcrecpp_unittest-pcrecpp_unittest.Tpo -c -o pcrecpp_unittest-pcrecpp_unittest.o `test -f 'pcrecpp_unittest.cc' || echo './'`pcrecpp_unittest.cc
+c++ -DHAVE_CONFIG_H -I.     -O2 -MT pcre_scanner_unittest-pcre_scanner_unittest.o -MD -MP -MF .deps/pcre_scanner_unittest-pcre_scanner_unittest.Tpo -c -o pcre_scanner_unittest-pcre_scanner_unittest.o `test -f 'pcre_scanner_unittest.cc' || echo './'`pcre_scanner_unittest.cc
+c++ -DHAVE_CONFIG_H -I.     -O2 -MT pcre_stringpiece_unittest-pcre_stringpiece_unittest.o -MD -MP -MF .deps/pcre_stringpiece_unittest-pcre_stringpiece_unittest.Tpo -c -o pcre_stringpiece_unittest-pcre_stringpiece_unittest.o `test -f 'pcre_stringpiece_unittest.cc' || echo './'`pcre_stringpiece_unittest.cc
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -fvisibility=hidden -g -O2 -MT libpcre_la-pcre_compile.lo -MD -MP -MF .deps/libpcre_la-pcre_compile.Tpo -c pcre_compile.c  -DDLL_EXPORT -DPIC -o .libs/libpcre_la-pcre_compile.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -fvisibility=hidden -g -O2 -MT libpcre_la-pcre_get.lo -MD -MP -MF .deps/libpcre_la-pcre_get.Tpo -c pcre_get.c  -DDLL_EXPORT -DPIC -o .libs/libpcre_la-pcre_get.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -fvisibility=hidden -g -O2 -MT libpcre_la-pcre_maketables.lo -MD -MP -MF .deps/libpcre_la-pcre_maketables.Tpo -c pcre_maketables.c  -DDLL_EXPORT -DPIC -o .libs/libpcre_la-pcre_maketables.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -fvisibility=hidden -g -O2 -MT libpcre_la-pcre_valid_utf8.lo -MD -MP -MF .deps/libpcre_la-pcre_valid_utf8.Tpo -c pcre_valid_utf8.c  -DDLL_EXPORT -DPIC -o .libs/libpcre_la-pcre_valid_utf8.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -fvisibility=hidden -g -O2 -MT libpcre_la-pcre_dfa_exec.lo -MD -MP -MF .deps/libpcre_la-pcre_dfa_exec.Tpo -c pcre_dfa_exec.c  -DDLL_EXPORT -DPIC -o .libs/libpcre_la-pcre_dfa_exec.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -fvisibility=hidden -g -O2 -MT libpcre_la-pcre_config.lo -MD -MP -MF .deps/libpcre_la-pcre_config.Tpo -c pcre_config.c  -DDLL_EXPORT -DPIC -o .libs/libpcre_la-pcre_config.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -fvisibility=hidden -g -O2 -MT libpcre_la-pcre_byte_order.lo -MD -MP -MF .deps/libpcre_la-pcre_byte_order.Tpo -c pcre_byte_order.c  -DDLL_EXPORT -DPIC -o .libs/libpcre_la-pcre_byte_order.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -fvisibility=hidden -g -O2 -MT libpcre_la-pcre_newline.lo -MD -MP -MF .deps/libpcre_la-pcre_newline.Tpo -c pcre_newline.c  -DDLL_EXPORT -DPIC -o .libs/libpcre_la-pcre_newline.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -fvisibility=hidden -g -O2 -MT libpcre_la-pcre_tables.lo -MD -MP -MF .deps/libpcre_la-pcre_tables.Tpo -c pcre_tables.c  -DDLL_EXPORT -DPIC -o .libs/libpcre_la-pcre_tables.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -fvisibility=hidden -g -O2 -MT libpcre_la-pcre_jit_compile.lo -MD -MP -MF .deps/libpcre_la-pcre_jit_compile.Tpo -c pcre_jit_compile.c  -DDLL_EXPORT -DPIC -o .libs/libpcre_la-pcre_jit_compile.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -fvisibility=hidden -g -O2 -MT libpcre_la-pcre_chartables.lo -MD -MP -MF .deps/libpcre_la-pcre_chartables.Tpo -c pcre_chartables.c  -DDLL_EXPORT -DPIC -o .libs/libpcre_la-pcre_chartables.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -fvisibility=hidden -g -O2 -MT libpcre_la-pcre_refcount.lo -MD -MP -MF .deps/libpcre_la-pcre_refcount.Tpo -c pcre_refcount.c  -DDLL_EXPORT -DPIC -o .libs/libpcre_la-pcre_refcount.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -fvisibility=hidden -g -O2 -MT libpcre_la-pcre_globals.lo -MD -MP -MF .deps/libpcre_la-pcre_globals.Tpo -c pcre_globals.c  -DDLL_EXPORT -DPIC -o .libs/libpcre_la-pcre_globals.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -fvisibility=hidden -g -O2 -MT libpcre_la-pcre_fullinfo.lo -MD -MP -MF .deps/libpcre_la-pcre_fullinfo.Tpo -c pcre_fullinfo.c  -DDLL_EXPORT -DPIC -o .libs/libpcre_la-pcre_fullinfo.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -fvisibility=hidden -g -O2 -MT libpcre_la-pcre_exec.lo -MD -MP -MF .deps/libpcre_la-pcre_exec.Tpo -c pcre_exec.c  -DDLL_EXPORT -DPIC -o .libs/libpcre_la-pcre_exec.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -fvisibility=hidden -g -O2 -MT libpcre_la-pcre_xclass.lo -MD -MP -MF .deps/libpcre_la-pcre_xclass.Tpo -c pcre_xclass.c  -DDLL_EXPORT -DPIC -o .libs/libpcre_la-pcre_xclass.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -fvisibility=hidden -g -O2 -MT libpcre_la-pcre_string_utils.lo -MD -MP -MF .deps/libpcre_la-pcre_string_utils.Tpo -c pcre_string_utils.c  -DDLL_EXPORT -DPIC -o .libs/libpcre_la-pcre_string_utils.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -fvisibility=hidden -g -O2 -MT libpcre_la-pcre_study.lo -MD -MP -MF .deps/libpcre_la-pcre_study.Tpo -c pcre_study.c  -DDLL_EXPORT -DPIC -o .libs/libpcre_la-pcre_study.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -fvisibility=hidden -g -O2 -MT libpcre_la-pcre_ucd.lo -MD -MP -MF .deps/libpcre_la-pcre_ucd.Tpo -c pcre_ucd.c  -DDLL_EXPORT -DPIC -o .libs/libpcre_la-pcre_ucd.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -fvisibility=hidden -g -O2 -MT libpcre_la-pcre_version.lo -MD -MP -MF .deps/libpcre_la-pcre_version.Tpo -c pcre_version.c  -DDLL_EXPORT -DPIC -o .libs/libpcre_la-pcre_version.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -fvisibility=hidden -g -O2 -MT libpcre_la-pcre_ord2utf8.lo -MD -MP -MF .deps/libpcre_la-pcre_ord2utf8.Tpo -c pcre_ord2utf8.c  -DDLL_EXPORT -DPIC -o .libs/libpcre_la-pcre_ord2utf8.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -fvisibility=hidden -g -O2 -MT libpcreposix_la-pcreposix.lo -MD -MP -MF .deps/libpcreposix_la-pcreposix.Tpo -c pcreposix.c  -DDLL_EXPORT -DPIC -o .libs/libpcreposix_la-pcreposix.o
+libtool: compile:  c++ -DHAVE_CONFIG_H -I. -fvisibility=hidden -fvisibility-inlines-hidden -O2 -MT libpcrecpp_la-pcre_scanner.lo -MD -MP -MF .deps/libpcrecpp_la-pcre_scanner.Tpo -c pcre_scanner.cc  -DDLL_EXPORT -DPIC -o .libs/libpcrecpp_la-pcre_scanner.o
+libtool: compile:  c++ -DHAVE_CONFIG_H -I. -fvisibility=hidden -fvisibility-inlines-hidden -O2 -MT libpcrecpp_la-pcre_stringpiece.lo -MD -MP -MF .deps/libpcrecpp_la-pcre_stringpiece.Tpo -c pcre_stringpiece.cc  -DDLL_EXPORT -DPIC -o .libs/libpcrecpp_la-pcre_stringpiece.o
+libtool: compile:  c++ -DHAVE_CONFIG_H -I. -fvisibility=hidden -fvisibility-inlines-hidden -O2 -MT libpcrecpp_la-pcrecpp.lo -MD -MP -MF .deps/libpcrecpp_la-pcrecpp.Tpo -c pcrecpp.cc  -DDLL_EXPORT -DPIC -o .libs/libpcrecpp_la-pcrecpp.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -fvisibility=hidden -g -O2 -MT libpcre_la-pcre_config.lo -MD -MP -MF .deps/libpcre_la-pcre_config.Tpo -c pcre_config.c -o libpcre_la-pcre_config.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -fvisibility=hidden -g -O2 -MT libpcre_la-pcre_tables.lo -MD -MP -MF .deps/libpcre_la-pcre_tables.Tpo -c pcre_tables.c -o libpcre_la-pcre_tables.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -fvisibility=hidden -g -O2 -MT libpcre_la-pcre_globals.lo -MD -MP -MF .deps/libpcre_la-pcre_globals.Tpo -c pcre_globals.c -o libpcre_la-pcre_globals.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -fvisibility=hidden -g -O2 -MT libpcre_la-pcre_string_utils.lo -MD -MP -MF .deps/libpcre_la-pcre_string_utils.Tpo -c pcre_string_utils.c -o libpcre_la-pcre_string_utils.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -fvisibility=hidden -g -O2 -MT libpcre_la-pcre_version.lo -MD -MP -MF .deps/libpcre_la-pcre_version.Tpo -c pcre_version.c -o libpcre_la-pcre_version.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -fvisibility=hidden -g -O2 -MT libpcre_la-pcre_chartables.lo -MD -MP -MF .deps/libpcre_la-pcre_chartables.Tpo -c pcre_chartables.c -o libpcre_la-pcre_chartables.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -fvisibility=hidden -g -O2 -MT libpcre_la-pcre_refcount.lo -MD -MP -MF .deps/libpcre_la-pcre_refcount.Tpo -c pcre_refcount.c -o libpcre_la-pcre_refcount.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -fvisibility=hidden -g -O2 -MT libpcre_la-pcre_jit_compile.lo -MD -MP -MF .deps/libpcre_la-pcre_jit_compile.Tpo -c pcre_jit_compile.c -o libpcre_la-pcre_jit_compile.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -fvisibility=hidden -g -O2 -MT libpcre_la-pcre_byte_order.lo -MD -MP -MF .deps/libpcre_la-pcre_byte_order.Tpo -c pcre_byte_order.c -o libpcre_la-pcre_byte_order.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -fvisibility=hidden -g -O2 -MT libpcre_la-pcre_ord2utf8.lo -MD -MP -MF .deps/libpcre_la-pcre_ord2utf8.Tpo -c pcre_ord2utf8.c -o libpcre_la-pcre_ord2utf8.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -fvisibility=hidden -g -O2 -MT libpcre_la-pcre_fullinfo.lo -MD -MP -MF .deps/libpcre_la-pcre_fullinfo.Tpo -c pcre_fullinfo.c -o libpcre_la-pcre_fullinfo.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -fvisibility=hidden -g -O2 -MT libpcre_la-pcre_valid_utf8.lo -MD -MP -MF .deps/libpcre_la-pcre_valid_utf8.Tpo -c pcre_valid_utf8.c -o libpcre_la-pcre_valid_utf8.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -fvisibility=hidden -g -O2 -MT libpcre_la-pcre_maketables.lo -MD -MP -MF .deps/libpcre_la-pcre_maketables.Tpo -c pcre_maketables.c -o libpcre_la-pcre_maketables.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -fvisibility=hidden -g -O2 -MT libpcre_la-pcre_newline.lo -MD -MP -MF .deps/libpcre_la-pcre_newline.Tpo -c pcre_newline.c -o libpcre_la-pcre_newline.o >/dev/null 2>&1
+pcreposix.c:56:0: warning: "PCREPOSIX_EXP_DECL" redefined [enabled by default]
+ #  define PCREPOSIX_EXP_DECL extern __declspec(dllexport)
+ ^
+In file included from pcreposix.c:46:0:
+config.h:254:0: note: this is the location of the previous definition
+ #define PCREPOSIX_EXP_DECL extern __attribute__ ((visibility ("default")))
+ ^
+pcreposix.c:57:0: warning: "PCREPOSIX_EXP_DEFN" redefined [enabled by default]
+ #  define PCREPOSIX_EXP_DEFN __declspec(dllexport)
+ ^
+In file included from pcreposix.c:46:0:
+config.h:257:0: note: this is the location of the previous definition
+ #define PCREPOSIX_EXP_DEFN extern __attribute__ ((visibility ("default")))
+ ^
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -fvisibility=hidden -g -O2 -MT libpcreposix_la-pcreposix.lo -MD -MP -MF .deps/libpcreposix_la-pcreposix.Tpo -c pcreposix.c -o libpcreposix_la-pcreposix.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -fvisibility=hidden -g -O2 -MT libpcre_la-pcre_get.lo -MD -MP -MF .deps/libpcre_la-pcre_get.Tpo -c pcre_get.c -o libpcre_la-pcre_get.o >/dev/null 2>&1
+mv -f .deps/libpcre_la-pcre_globals.Tpo .deps/libpcre_la-pcre_globals.Plo
+mv -f .deps/libpcre_la-pcre_tables.Tpo .deps/libpcre_la-pcre_tables.Plo
+mv -f .deps/libpcre_la-pcre_string_utils.Tpo .deps/libpcre_la-pcre_string_utils.Plo
+mv -f .deps/libpcre_la-pcre_config.Tpo .deps/libpcre_la-pcre_config.Plo
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -fvisibility=hidden -g -O2 -MT libpcre_la-pcre_xclass.lo -MD -MP -MF .deps/libpcre_la-pcre_xclass.Tpo -c pcre_xclass.c -o libpcre_la-pcre_xclass.o >/dev/null 2>&1
+mv -f .deps/libpcre_la-pcre_version.Tpo .deps/libpcre_la-pcre_version.Plo
+mv -f .deps/libpcre_la-pcre_chartables.Tpo .deps/libpcre_la-pcre_chartables.Plo
+mv -f .deps/libpcre_la-pcre_refcount.Tpo .deps/libpcre_la-pcre_refcount.Plo
+mv -f .deps/libpcre_la-pcre_jit_compile.Tpo .deps/libpcre_la-pcre_jit_compile.Plo
+mv -f .deps/libpcre_la-pcre_byte_order.Tpo .deps/libpcre_la-pcre_byte_order.Plo
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -fvisibility=hidden -g -O2 -MT libpcre_la-pcre_ucd.lo -MD -MP -MF .deps/libpcre_la-pcre_ucd.Tpo -c pcre_ucd.c -o libpcre_la-pcre_ucd.o >/dev/null 2>&1
+mv -f .deps/libpcre_la-pcre_ord2utf8.Tpo .deps/libpcre_la-pcre_ord2utf8.Plo
+mv -f .deps/libpcre_la-pcre_fullinfo.Tpo .deps/libpcre_la-pcre_fullinfo.Plo
+mv -f .deps/pcretest-pcre_printint.Tpo .deps/pcretest-pcre_printint.Po
+mv -f .deps/libpcre_la-pcre_valid_utf8.Tpo .deps/libpcre_la-pcre_valid_utf8.Plo
+mv -f .deps/libpcre_la-pcre_newline.Tpo .deps/libpcre_la-pcre_newline.Plo
+mv -f .deps/libpcre_la-pcre_maketables.Tpo .deps/libpcre_la-pcre_maketables.Plo
+mv -f .deps/libpcreposix_la-pcreposix.Tpo .deps/libpcreposix_la-pcreposix.Plo
+mv -f .deps/libpcre_la-pcre_get.Tpo .deps/libpcre_la-pcre_get.Plo
+libtool: compile:  c++ -DHAVE_CONFIG_H -I. -fvisibility=hidden -fvisibility-inlines-hidden -O2 -MT libpcrecpp_la-pcre_stringpiece.lo -MD -MP -MF .deps/libpcrecpp_la-pcre_stringpiece.Tpo -c pcre_stringpiece.cc -o libpcrecpp_la-pcre_stringpiece.o >/dev/null 2>&1
+mv -f .deps/pcre_scanner_unittest-pcre_scanner_unittest.Tpo .deps/pcre_scanner_unittest-pcre_scanner_unittest.Po
+libtool: compile:  c++ -DHAVE_CONFIG_H -I. -fvisibility=hidden -fvisibility-inlines-hidden -O2 -MT libpcrecpp_la-pcre_scanner.lo -MD -MP -MF .deps/libpcrecpp_la-pcre_scanner.Tpo -c pcre_scanner.cc -o libpcrecpp_la-pcre_scanner.o >/dev/null 2>&1
+mv -f .deps/libpcre_la-pcre_xclass.Tpo .deps/libpcre_la-pcre_xclass.Plo
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -fvisibility=hidden -g -O2 -MT libpcre_la-pcre_study.lo -MD -MP -MF .deps/libpcre_la-pcre_study.Tpo -c pcre_study.c -o libpcre_la-pcre_study.o >/dev/null 2>&1
+mv -f .deps/libpcre_la-pcre_ucd.Tpo .deps/libpcre_la-pcre_ucd.Plo
+mv -f .deps/pcre_stringpiece_unittest-pcre_stringpiece_unittest.Tpo .deps/pcre_stringpiece_unittest-pcre_stringpiece_unittest.Po
+mv -f .deps/libpcrecpp_la-pcre_stringpiece.Tpo .deps/libpcrecpp_la-pcre_stringpiece.Plo
+mv -f .deps/libpcre_la-pcre_study.Tpo .deps/libpcre_la-pcre_study.Plo
+mv -f .deps/libpcrecpp_la-pcre_scanner.Tpo .deps/libpcrecpp_la-pcre_scanner.Plo
+mv -f .deps/pcregrep-pcregrep.Tpo .deps/pcregrep-pcregrep.Po
+libtool: compile:  c++ -DHAVE_CONFIG_H -I. -fvisibility=hidden -fvisibility-inlines-hidden -O2 -MT libpcrecpp_la-pcrecpp.lo -MD -MP -MF .deps/libpcrecpp_la-pcrecpp.Tpo -c pcrecpp.cc -o libpcrecpp_la-pcrecpp.o >/dev/null 2>&1
+mv -f .deps/libpcrecpp_la-pcrecpp.Tpo .deps/libpcrecpp_la-pcrecpp.Plo
+mv -f .deps/pcretest-pcretest.Tpo .deps/pcretest-pcretest.Po
+mv -f .deps/pcrecpp_unittest-pcrecpp_unittest.Tpo .deps/pcrecpp_unittest-pcrecpp_unittest.Po
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -fvisibility=hidden -g -O2 -MT libpcre_la-pcre_dfa_exec.lo -MD -MP -MF .deps/libpcre_la-pcre_dfa_exec.Tpo -c pcre_dfa_exec.c -o libpcre_la-pcre_dfa_exec.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -fvisibility=hidden -g -O2 -MT libpcre_la-pcre_compile.lo -MD -MP -MF .deps/libpcre_la-pcre_compile.Tpo -c pcre_compile.c -o libpcre_la-pcre_compile.o >/dev/null 2>&1
+mv -f .deps/libpcre_la-pcre_dfa_exec.Tpo .deps/libpcre_la-pcre_dfa_exec.Plo
+mv -f .deps/libpcre_la-pcre_compile.Tpo .deps/libpcre_la-pcre_compile.Plo
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -fvisibility=hidden -g -O2 -MT libpcre_la-pcre_exec.lo -MD -MP -MF .deps/libpcre_la-pcre_exec.Tpo -c pcre_exec.c -o libpcre_la-pcre_exec.o >/dev/null 2>&1
+mv -f .deps/libpcre_la-pcre_exec.Tpo .deps/libpcre_la-pcre_exec.Plo
+/bin/sh ./libtool  --tag=CC   --mode=link cc -fvisibility=hidden    -g -O2 -no-undefined -version-info 3:10:2  -o libpcre.la -rpath /workspace/destdir/lib libpcre_la-pcre_byte_order.lo libpcre_la-pcre_compile.lo libpcre_la-pcre_config.lo libpcre_la-pcre_dfa_exec.lo libpcre_la-pcre_exec.lo libpcre_la-pcre_fullinfo.lo libpcre_la-pcre_get.lo libpcre_la-pcre_globals.lo libpcre_la-pcre_jit_compile.lo libpcre_la-pcre_maketables.lo libpcre_la-pcre_newline.lo libpcre_la-pcre_ord2utf8.lo libpcre_la-pcre_refcount.lo libpcre_la-pcre_string_utils.lo libpcre_la-pcre_study.lo libpcre_la-pcre_tables.lo libpcre_la-pcre_ucd.lo libpcre_la-pcre_valid_utf8.lo libpcre_la-pcre_version.lo libpcre_la-pcre_xclass.lo libpcre_la-pcre_chartables.lo  
+libtool: link: cc -shared  .libs/libpcre_la-pcre_byte_order.o .libs/libpcre_la-pcre_compile.o .libs/libpcre_la-pcre_config.o .libs/libpcre_la-pcre_dfa_exec.o .libs/libpcre_la-pcre_exec.o .libs/libpcre_la-pcre_fullinfo.o .libs/libpcre_la-pcre_get.o .libs/libpcre_la-pcre_globals.o .libs/libpcre_la-pcre_jit_compile.o .libs/libpcre_la-pcre_maketables.o .libs/libpcre_la-pcre_newline.o .libs/libpcre_la-pcre_ord2utf8.o .libs/libpcre_la-pcre_refcount.o .libs/libpcre_la-pcre_string_utils.o .libs/libpcre_la-pcre_study.o .libs/libpcre_la-pcre_tables.o .libs/libpcre_la-pcre_ucd.o .libs/libpcre_la-pcre_valid_utf8.o .libs/libpcre_la-pcre_version.o .libs/libpcre_la-pcre_xclass.o .libs/libpcre_la-pcre_chartables.o    -g -O2   -o .libs/libpcre-1.dll -Wl,--enable-auto-image-base -Xlinker --out-implib -Xlinker .libs/libpcre.dll.a
+libtool: link: x86_64-w64-mingw32-ar cr .libs/libpcre.a  libpcre_la-pcre_byte_order.o libpcre_la-pcre_compile.o libpcre_la-pcre_config.o libpcre_la-pcre_dfa_exec.o libpcre_la-pcre_exec.o libpcre_la-pcre_fullinfo.o libpcre_la-pcre_get.o libpcre_la-pcre_globals.o libpcre_la-pcre_jit_compile.o libpcre_la-pcre_maketables.o libpcre_la-pcre_newline.o libpcre_la-pcre_ord2utf8.o libpcre_la-pcre_refcount.o libpcre_la-pcre_string_utils.o libpcre_la-pcre_study.o libpcre_la-pcre_tables.o libpcre_la-pcre_ucd.o libpcre_la-pcre_valid_utf8.o libpcre_la-pcre_version.o libpcre_la-pcre_xclass.o libpcre_la-pcre_chartables.o
+libtool: link: x86_64-w64-mingw32-ranlib .libs/libpcre.a
+libtool: link: ( cd ".libs" && rm -f "libpcre.la" && ln -s "../libpcre.la" "libpcre.la" )
+/bin/sh ./libtool  --tag=CC   --mode=link cc -fvisibility=hidden   -g -O2 -no-undefined -version-info 0:6:0  -o libpcreposix.la -rpath /workspace/destdir/lib libpcreposix_la-pcreposix.lo libpcre.la 
+/bin/sh ./libtool  --tag=CXX   --mode=link c++ -fvisibility=hidden -fvisibility-inlines-hidden   -O2 -no-undefined -version-info 0:1:0                           -Wl,--export-all-symbols  -o libpcrecpp.la -rpath /workspace/destdir/lib libpcrecpp_la-pcrecpp.lo libpcrecpp_la-pcre_scanner.lo libpcrecpp_la-pcre_stringpiece.lo libpcre.la 
+libtool: link: cc -shared  .libs/libpcreposix_la-pcreposix.o   ./.libs/libpcre.dll.a  -g -O2   -o .libs/libpcreposix-0.dll -Wl,--enable-auto-image-base -Xlinker --out-implib -Xlinker .libs/libpcreposix.dll.a
+libtool: warning: library '/opt/x86_64-w64-mingw32/bin/../lib/gcc/x86_64-w64-mingw32/4.8.5/../../../../x86_64-w64-mingw32/lib/../lib/libstdc++.la' was moved.
+libtool: link: x86_64-w64-mingw32-ar cr .libs/libpcreposix.a  libpcreposix_la-pcreposix.o
+libtool: link: x86_64-w64-mingw32-ranlib .libs/libpcreposix.a
+libtool: link: ( cd ".libs" && rm -f "libpcreposix.la" && ln -s "../libpcreposix.la" "libpcreposix.la" )
+libtool: link: c++ -shared -nostdlib /opt/x86_64-w64-mingw32/bin/../x86_64-w64-mingw32/sys-root/lib/../lib/dllcrt2.o /opt/x86_64-w64-mingw32/bin/../x86_64-w64-mingw32/sys-root/lib/../lib/crtbegin.o  .libs/libpcrecpp_la-pcrecpp.o .libs/libpcrecpp_la-pcre_scanner.o .libs/libpcrecpp_la-pcre_stringpiece.o   ./.libs/libpcre.dll.a -L/opt/x86_64-w64-mingw32/bin/../lib/gcc/x86_64-w64-mingw32/4.8.5 -L/opt/x86_64-w64-mingw32/bin/../lib/gcc -L/opt/x86_64-w64-mingw32/bin/../lib/gcc/x86_64-w64-mingw32/4.8.5/../../../../x86_64-w64-mingw32/lib/../lib -L/opt/x86_64-w64-mingw32/bin/../x86_64-w64-mingw32/sys-root/lib/../lib -L/opt/x86_64-w64-mingw32/bin/../lib/gcc/x86_64-w64-mingw32/4.8.5/../../../../x86_64-w64-mingw32/lib -L/opt/x86_64-w64-mingw32/bin/../x86_64-w64-mingw32/sys-root/lib /opt/x86_64-w64-mingw32/bin/../lib/gcc/x86_64-w64-mingw32/4.8.5/../../../../x86_64-w64-mingw32/lib/../lib/libstdc++.dll.a -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt /opt/x86_64-w64-mingw32/bin/../x86_64-w64-mingw32/sys-root/lib/../lib/crtend.o  -O2 -Wl,--export-all-symbols   -o .libs/libpcrecpp-0.dll -Wl,--enable-auto-image-base -Xlinker --out-implib -Xlinker .libs/libpcrecpp.dll.a
+/bin/sh ./libtool  --tag=CC   --mode=link cc    -g -O2   -o pcretest.exe pcretest-pcretest.o pcretest-pcre_printint.o    libpcre.la libpcreposix.la    
+/bin/sh ./libtool  --tag=CC   --mode=link cc   -g -O2   -o pcregrep.exe pcregrep-pcregrep.o   libpcre.la libpcreposix.la  
+libtool: link: x86_64-w64-mingw32-ar cr .libs/libpcrecpp.a  libpcrecpp_la-pcrecpp.o libpcrecpp_la-pcre_scanner.o libpcrecpp_la-pcre_stringpiece.o
+libtool: link: x86_64-w64-mingw32-ranlib .libs/libpcrecpp.a
+libtool: link: ( cd ".libs" && rm -f "libpcrecpp.la" && ln -s "../libpcrecpp.la" "libpcrecpp.la" )
+/bin/sh ./libtool  --tag=CXX   --mode=link c++  -O2   -o pcrecpp_unittest.exe pcrecpp_unittest-pcrecpp_unittest.o libpcrecpp.la  
+/bin/sh ./libtool  --tag=CXX   --mode=link c++  -O2   -o pcre_scanner_unittest.exe pcre_scanner_unittest-pcre_scanner_unittest.o libpcrecpp.la  
+/bin/sh ./libtool  --tag=CXX   --mode=link c++  -O2   -o pcre_stringpiece_unittest.exe pcre_stringpiece_unittest-pcre_stringpiece_unittest.o libpcrecpp.la  
+libtool: link: cc -g -O2 -o .libs/pcretest.exe pcretest-pcretest.o pcretest-pcre_printint.o  ./.libs/libpcre.dll.a ./.libs/libpcreposix.dll.a /workspace/srcdir/pcre-8.42/.libs/libpcre.dll.a -L/workspace/destdir/lib
+libtool: link: cc -g -O2 -o .libs/pcregrep.exe pcregrep-pcregrep.o  ./.libs/libpcre.dll.a ./.libs/libpcreposix.dll.a /workspace/srcdir/pcre-8.42/.libs/libpcre.dll.a -L/workspace/destdir/lib
+libtool:   error: Could not determine the host path corresponding to
+libtool:   error:   '/workspace/srcdir/pcre-8.42/.libs'
+libtool:   error: Continuing, but uninstalled executables may not work.
+libtool:   error: Could not determine the host path corresponding to
+libtool:   error:   '/workspace/srcdir/pcre-8.42/.libs:/workspace/destdir/lib:/workspace/destdir/bin'
+libtool:   error: Continuing, but uninstalled executables may not work.
+libtool: warning: library '/opt/x86_64-w64-mingw32/bin/../lib/gcc/x86_64-w64-mingw32/4.8.5/../../../../x86_64-w64-mingw32/lib/../lib/libstdc++.la' was moved.
+libtool: warning: library '/opt/x86_64-w64-mingw32/bin/../lib/gcc/x86_64-w64-mingw32/4.8.5/../../../../x86_64-w64-mingw32/lib/../lib/libstdc++.la' was moved.
+libtool:   error: Could not determine the host path corresponding to
+libtool: warning: library '/opt/x86_64-w64-mingw32/bin/../lib/gcc/x86_64-w64-mingw32/4.8.5/../../../../x86_64-w64-mingw32/lib/../lib/libstdc++.la' was moved.
+libtool:   error:   '/workspace/srcdir/pcre-8.42/.libs'
+libtool:   error: Continuing, but uninstalled executables may not work.
+libtool:   error: Could not determine the host path corresponding to
+libtool:   error:   '/workspace/srcdir/pcre-8.42/.libs:/workspace/destdir/lib:/workspace/destdir/bin'
+libtool: warning: library '/opt/x86_64-w64-mingw32/bin/../lib/gcc/x86_64-w64-mingw32/4.8.5/../../../../x86_64-w64-mingw32/lib/../lib/libstdc++.la' was moved.
+libtool:   error: Continuing, but uninstalled executables may not work.
+libtool: warning: library '/opt/x86_64-w64-mingw32/bin/../lib/gcc/x86_64-w64-mingw32/4.8.5/../../../../x86_64-w64-mingw32/lib/../lib/libstdc++.la' was moved.
+libtool: warning: library '/opt/x86_64-w64-mingw32/bin/../lib/gcc/x86_64-w64-mingw32/4.8.5/../../../../x86_64-w64-mingw32/lib/../lib/libstdc++.la' was moved.
+libtool: link: c++ -O2 -o .libs/pcre_scanner_unittest.exe pcre_scanner_unittest-pcre_scanner_unittest.o  ./.libs/libpcrecpp.dll.a /workspace/srcdir/pcre-8.42/.libs/libpcre.dll.a /opt/x86_64-w64-mingw32/bin/../lib/gcc/x86_64-w64-mingw32/4.8.5/../../../../x86_64-w64-mingw32/lib/../lib/libstdc++.dll.a -L/workspace/destdir/lib -L/opt/x86_64-w64-mingw32/bin/../lib/gcc/x86_64-w64-mingw32/4.8.5/../../../../x86_64-w64-mingw32/lib/../lib
+libtool: link: c++ -O2 -o .libs/pcre_stringpiece_unittest.exe pcre_stringpiece_unittest-pcre_stringpiece_unittest.o  ./.libs/libpcrecpp.dll.a /workspace/srcdir/pcre-8.42/.libs/libpcre.dll.a /opt/x86_64-w64-mingw32/bin/../lib/gcc/x86_64-w64-mingw32/4.8.5/../../../../x86_64-w64-mingw32/lib/../lib/libstdc++.dll.a -L/workspace/destdir/lib -L/opt/x86_64-w64-mingw32/bin/../lib/gcc/x86_64-w64-mingw32/4.8.5/../../../../x86_64-w64-mingw32/lib/../lib
+libtool: link: c++ -O2 -o .libs/pcrecpp_unittest.exe pcrecpp_unittest-pcrecpp_unittest.o  ./.libs/libpcrecpp.dll.a /workspace/srcdir/pcre-8.42/.libs/libpcre.dll.a /opt/x86_64-w64-mingw32/bin/../lib/gcc/x86_64-w64-mingw32/4.8.5/../../../../x86_64-w64-mingw32/lib/../lib/libstdc++.dll.a -L/workspace/destdir/lib -L/opt/x86_64-w64-mingw32/bin/../lib/gcc/x86_64-w64-mingw32/4.8.5/../../../../x86_64-w64-mingw32/lib/../lib
+libtool:   error: Could not determine the host path corresponding to
+libtool:   error:   '/workspace/srcdir/pcre-8.42/.libs:/opt/x86_64-w64-mingw32/bin/../lib/gcc/x86_64-w64-mingw32/4.8.5/../../../../x86_64-w64-mingw32/lib/../lib'
+libtool:   error: Continuing, but uninstalled executables may not work.
+libtool:   error: Could not determine the host path corresponding to
+libtool:   error: Could not determine the host path corresponding to
+libtool:   error:   '/workspace/srcdir/pcre-8.42/.libs:/opt/x86_64-w64-mingw32/bin/../lib/gcc/x86_64-w64-mingw32/4.8.5/../../../../x86_64-w64-mingw32/lib/../lib'
+libtool:   error: Continuing, but uninstalled executables may not work.
+libtool:   error:   '/workspace/srcdir/pcre-8.42/.libs:/opt/x86_64-w64-mingw32/bin/../lib/gcc/x86_64-w64-mingw32/4.8.5/../../../../x86_64-w64-mingw32/lib/../lib'
+libtool:   error: Could not determine the host path corresponding to
+libtool:   error:   '/workspace/srcdir/pcre-8.42/.libs:/opt/x86_64-w64-mingw32/bin/../lib/gcc/x86_64-w64-mingw32/4.8.5/../../../../x86_64-w64-mingw32/lib/../lib:/opt/x86_64-w64-mingw32/bin/../lib/gcc/x86_64-w64-mingw32/4.8.5/../../../../x86_64-w64-mingw32/lib/../bin:/workspace/destdir/lib:/workspace/destdir/bin'
+libtool:   error: Continuing, but uninstalled executables may not work.
+libtool:   error: Continuing, but uninstalled executables may not work.
+libtool:   error: Could not determine the host path corresponding to
+libtool:   error:   '/workspace/srcdir/pcre-8.42/.libs:/opt/x86_64-w64-mingw32/bin/../lib/gcc/x86_64-w64-mingw32/4.8.5/../../../../x86_64-w64-mingw32/lib/../lib:/opt/x86_64-w64-mingw32/bin/../lib/gcc/x86_64-w64-mingw32/4.8.5/../../../../x86_64-w64-mingw32/lib/../bin:/workspace/destdir/lib:/workspace/destdir/bin'
+libtool:   error: Could not determine the host path corresponding to
+libtool:   error: Continuing, but uninstalled executables may not work.
+libtool:   error:   '/workspace/srcdir/pcre-8.42/.libs:/opt/x86_64-w64-mingw32/bin/../lib/gcc/x86_64-w64-mingw32/4.8.5/../../../../x86_64-w64-mingw32/lib/../lib:/opt/x86_64-w64-mingw32/bin/../lib/gcc/x86_64-w64-mingw32/4.8.5/../../../../x86_64-w64-mingw32/lib/../bin:/workspace/destdir/lib:/workspace/destdir/bin'
+libtool:   error: Continuing, but uninstalled executables may not work.
+make[1]: Leaving directory '/workspace/srcdir/pcre-8.42'
+ ---> make install VERBOSE=1
+make  install-am
+make[1]: Entering directory '/workspace/srcdir/pcre-8.42'
+make[2]: Entering directory '/workspace/srcdir/pcre-8.42'
+ ./install-sh -c -d '/workspace/destdir/lib'
+ /bin/sh ./libtool   --mode=install /usr/bin/install -c   libpcre.la libpcreposix.la libpcrecpp.la '/workspace/destdir/lib'
+libtool: install: /usr/bin/install -c .libs/libpcre.dll.a /workspace/destdir/lib/libpcre.dll.a
+libtool: install: base_file=`basename libpcre.la`
+libtool: install:  dlpath=`/bin/sh 2>&1 -c '. .libs/'libpcre.la'i; echo libpcre-1.dll'`
+libtool: install:  dldir=/workspace/destdir/lib/`dirname ../bin/libpcre-1.dll`
+libtool: install:  test -d /workspace/destdir/lib/../bin || mkdir -p /workspace/destdir/lib/../bin
+libtool: install:  /usr/bin/install -c .libs/libpcre-1.dll /workspace/destdir/lib/../bin/libpcre-1.dll
+libtool: install:  chmod a+x /workspace/destdir/lib/../bin/libpcre-1.dll
+libtool: install:  if test -n '' && test -n 'x86_64-w64-mingw32-strip --strip-unneeded'; then eval 'x86_64-w64-mingw32-strip --strip-unneeded /workspace/destdir/lib/../bin/libpcre-1.dll' || exit 0; fi
+libtool: install: /usr/bin/install -c .libs/libpcre.lai /workspace/destdir/lib/libpcre.la
+libtool: install: /usr/bin/install -c .libs/libpcreposix.dll.a /workspace/destdir/lib/libpcreposix.dll.a
+libtool: install: base_file=`basename libpcreposix.la`
+libtool: install:  dlpath=`/bin/sh 2>&1 -c '. .libs/'libpcreposix.la'i; echo libpcreposix-0.dll'`
+libtool: install:  dldir=/workspace/destdir/lib/`dirname ../bin/libpcreposix-0.dll`
+libtool: install:  test -d /workspace/destdir/lib/../bin || mkdir -p /workspace/destdir/lib/../bin
+libtool: install:  /usr/bin/install -c .libs/libpcreposix-0.dll /workspace/destdir/lib/../bin/libpcreposix-0.dll
+libtool: install:  chmod a+x /workspace/destdir/lib/../bin/libpcreposix-0.dll
+libtool: install:  if test -n '' && test -n 'x86_64-w64-mingw32-strip --strip-unneeded'; then eval 'x86_64-w64-mingw32-strip --strip-unneeded /workspace/destdir/lib/../bin/libpcreposix-0.dll' || exit 0; fi
+libtool: install: /usr/bin/install -c .libs/libpcreposix.lai /workspace/destdir/lib/libpcreposix.la
+libtool: install: /usr/bin/install -c .libs/libpcrecpp.dll.a /workspace/destdir/lib/libpcrecpp.dll.a
+libtool: install: base_file=`basename libpcrecpp.la`
+libtool: install:  dlpath=`/bin/sh 2>&1 -c '. .libs/'libpcrecpp.la'i; echo libpcrecpp-0.dll'`
+libtool: install:  dldir=/workspace/destdir/lib/`dirname ../bin/libpcrecpp-0.dll`
+libtool: install:  test -d /workspace/destdir/lib/../bin || mkdir -p /workspace/destdir/lib/../bin
+libtool: install:  /usr/bin/install -c .libs/libpcrecpp-0.dll /workspace/destdir/lib/../bin/libpcrecpp-0.dll
+libtool: install:  chmod a+x /workspace/destdir/lib/../bin/libpcrecpp-0.dll
+libtool: install:  if test -n '' && test -n 'x86_64-w64-mingw32-strip --strip-unneeded'; then eval 'x86_64-w64-mingw32-strip --strip-unneeded /workspace/destdir/lib/../bin/libpcrecpp-0.dll' || exit 0; fi
+libtool: install: /usr/bin/install -c .libs/libpcrecpp.lai /workspace/destdir/lib/libpcrecpp.la
+libtool: install: /usr/bin/install -c .libs/libpcre.a /workspace/destdir/lib/libpcre.a
+libtool: install: chmod 644 /workspace/destdir/lib/libpcre.a
+libtool: install: x86_64-w64-mingw32-ranlib /workspace/destdir/lib/libpcre.a
+libtool: install: /usr/bin/install -c .libs/libpcreposix.a /workspace/destdir/lib/libpcreposix.a
+libtool: install: chmod 644 /workspace/destdir/lib/libpcreposix.a
+libtool: install: x86_64-w64-mingw32-ranlib /workspace/destdir/lib/libpcreposix.a
+libtool: install: /usr/bin/install -c .libs/libpcrecpp.a /workspace/destdir/lib/libpcrecpp.a
+libtool: install: chmod 644 /workspace/destdir/lib/libpcrecpp.a
+libtool: install: x86_64-w64-mingw32-ranlib /workspace/destdir/lib/libpcrecpp.a
+ ./install-sh -c -d '/workspace/destdir/bin'
+  /bin/sh ./libtool   --mode=install /usr/bin/install -c pcretest.exe pcregrep.exe '/workspace/destdir/bin'
+libtool: install: /usr/bin/install -c .libs/pcretest.exe /workspace/destdir/bin/pcretest.exe
+libtool: install: /usr/bin/install -c .libs/pcregrep.exe /workspace/destdir/bin/pcregrep.exe
+ ./install-sh -c -d '/workspace/destdir/bin'
+ /usr/bin/install -c pcre-config '/workspace/destdir/bin'
+ ./install-sh -c -d '/workspace/destdir/share/doc/pcre'
+ /usr/bin/install -c -m 644 doc/pcre.txt doc/pcre-config.txt doc/pcregrep.txt doc/pcretest.txt AUTHORS COPYING ChangeLog LICENCE NEWS README '/workspace/destdir/share/doc/pcre'
+ ./install-sh -c -d '/workspace/destdir/share/doc/pcre/html'
+ /usr/bin/install -c -m 644 doc/html/NON-AUTOTOOLS-BUILD.txt doc/html/README.txt doc/html/index.html doc/html/pcre-config.html doc/html/pcre.html doc/html/pcre16.html doc/html/pcre32.html doc/html/pcre_assign_jit_stack.html doc/html/pcre_compile.html doc/html/pcre_compile2.html doc/html/pcre_config.html doc/html/pcre_copy_named_substring.html doc/html/pcre_copy_substring.html doc/html/pcre_dfa_exec.html doc/html/pcre_exec.html doc/html/pcre_free_study.html doc/html/pcre_free_substring.html doc/html/pcre_free_substring_list.html doc/html/pcre_fullinfo.html doc/html/pcre_get_named_substring.html doc/html/pcre_get_stringnumber.html doc/html/pcre_get_stringtable_entries.html doc/html/pcre_get_substring.html doc/html/pcre_get_substring_list.html doc/html/pcre_jit_exec.html doc/html/pcre_jit_stack_alloc.html doc/html/pcre_jit_stack_free.html doc/html/pcre_maketables.html doc/html/pcre_pattern_to_host_byte_order.html doc/html/pcre_refcount.html doc/html/pcre_study.html doc/html/pcre_utf16_to_host_byte_order.html doc/html/pcre_utf32_to_host_byte_order.html doc/html/pcre_version.html doc/html/pcreapi.html doc/html/pcrebuild.html doc/html/pcrecallout.html doc/html/pcrecompat.html doc/html/pcredemo.html doc/html/pcregrep.html '/workspace/destdir/share/doc/pcre/html'
+ /usr/bin/install -c -m 644 doc/html/pcrejit.html doc/html/pcrelimits.html doc/html/pcrematching.html doc/html/pcrepartial.html doc/html/pcrepattern.html doc/html/pcreperform.html doc/html/pcreposix.html doc/html/pcreprecompile.html doc/html/pcresample.html doc/html/pcrestack.html doc/html/pcresyntax.html doc/html/pcretest.html doc/html/pcreunicode.html '/workspace/destdir/share/doc/pcre/html'
+ ./install-sh -c -d '/workspace/destdir/share/doc/pcre/html'
+ /usr/bin/install -c -m 644 doc/html/pcrecpp.html '/workspace/destdir/share/doc/pcre/html'
+ ./install-sh -c -d '/workspace/destdir/include'
+ /usr/bin/install -c -m 644 pcreposix.h pcrecpp.h pcre_scanner.h '/workspace/destdir/include'
+ ./install-sh -c -d '/workspace/destdir/share/man/man1'
+ /usr/bin/install -c -m 644 doc/pcre-config.1 doc/pcregrep.1 doc/pcretest.1 '/workspace/destdir/share/man/man1'
+ ./install-sh -c -d '/workspace/destdir/share/man/man3'
+ /usr/bin/install -c -m 644 doc/pcre.3 doc/pcre16.3 doc/pcre32.3 doc/pcre_assign_jit_stack.3 doc/pcre_compile.3 doc/pcre_compile2.3 doc/pcre_config.3 doc/pcre_copy_named_substring.3 doc/pcre_copy_substring.3 doc/pcre_dfa_exec.3 doc/pcre_exec.3 doc/pcre_free_study.3 doc/pcre_free_substring.3 doc/pcre_free_substring_list.3 doc/pcre_fullinfo.3 doc/pcre_get_named_substring.3 doc/pcre_get_stringnumber.3 doc/pcre_get_stringtable_entries.3 doc/pcre_get_substring.3 doc/pcre_get_substring_list.3 doc/pcre_jit_exec.3 doc/pcre_jit_stack_alloc.3 doc/pcre_jit_stack_free.3 doc/pcre_maketables.3 doc/pcre_pattern_to_host_byte_order.3 doc/pcre_refcount.3 doc/pcre_study.3 doc/pcre_utf16_to_host_byte_order.3 doc/pcre_utf32_to_host_byte_order.3 doc/pcre_version.3 doc/pcreapi.3 doc/pcrebuild.3 doc/pcrecallout.3 doc/pcrecompat.3 doc/pcredemo.3 doc/pcrejit.3 doc/pcrelimits.3 doc/pcrematching.3 doc/pcrepartial.3 doc/pcrepattern.3 '/workspace/destdir/share/man/man3'
+ /usr/bin/install -c -m 644 doc/pcreperform.3 doc/pcreposix.3 doc/pcreprecompile.3 doc/pcresample.3 doc/pcrestack.3 doc/pcresyntax.3 doc/pcreunicode.3 doc/pcrecpp.3 '/workspace/destdir/share/man/man3'
+ ./install-sh -c -d '/workspace/destdir/include'
+ /usr/bin/install -c -m 644 pcre.h pcrecpparg.h pcre_stringpiece.h '/workspace/destdir/include'
+ ./install-sh -c -d '/workspace/destdir/lib/pkgconfig'
+ /usr/bin/install -c -m 644 libpcre.pc libpcreposix.pc libpcrecpp.pc '/workspace/destdir/lib/pkgconfig'
+make  install-data-hook
+make[3]: Entering directory '/workspace/srcdir/pcre-8.42'
+ln -sf pcre_assign_jit_stack.3		 /workspace/destdir/share/man/man3/pcre16_assign_jit_stack.3
+ln -sf pcre_compile.3			 /workspace/destdir/share/man/man3/pcre16_compile.3
+ln -sf pcre_compile2.3			 /workspace/destdir/share/man/man3/pcre16_compile2.3
+ln -sf pcre_config.3			 /workspace/destdir/share/man/man3/pcre16_config.3
+ln -sf pcre_copy_named_substring.3	 /workspace/destdir/share/man/man3/pcre16_copy_named_substring.3
+ln -sf pcre_copy_substring.3		 /workspace/destdir/share/man/man3/pcre16_copy_substring.3
+ln -sf pcre_dfa_exec.3			 /workspace/destdir/share/man/man3/pcre16_dfa_exec.3
+ln -sf pcre_exec.3			 /workspace/destdir/share/man/man3/pcre16_exec.3
+ln -sf pcre_free_study.3		 /workspace/destdir/share/man/man3/pcre16_free_study.3
+ln -sf pcre_free_substring.3		 /workspace/destdir/share/man/man3/pcre16_free_substring.3
+ln -sf pcre_free_substring_list.3	 /workspace/destdir/share/man/man3/pcre16_free_substring_list.3
+ln -sf pcre_fullinfo.3			 /workspace/destdir/share/man/man3/pcre16_fullinfo.3
+ln -sf pcre_get_named_substring.3	 /workspace/destdir/share/man/man3/pcre16_get_named_substring.3
+ln -sf pcre_get_stringnumber.3		 /workspace/destdir/share/man/man3/pcre16_get_stringnumber.3
+ln -sf pcre_get_stringtable_entries.3	 /workspace/destdir/share/man/man3/pcre16_get_stringtable_entries.3
+ln -sf pcre_get_substring.3		 /workspace/destdir/share/man/man3/pcre16_get_substring.3
+ln -sf pcre_get_substring_list.3	 /workspace/destdir/share/man/man3/pcre16_get_substring_list.3
+ln -sf pcre_jit_exec.3			 /workspace/destdir/share/man/man3/pcre16_jit_exec.3
+ln -sf pcre_jit_stack_alloc.3		 /workspace/destdir/share/man/man3/pcre16_jit_stack_alloc.3
+ln -sf pcre_jit_stack_free.3		 /workspace/destdir/share/man/man3/pcre16_jit_stack_free.3
+ln -sf pcre_maketables.3		 /workspace/destdir/share/man/man3/pcre16_maketables.3
+ln -sf pcre_pattern_to_host_byte_order.3 /workspace/destdir/share/man/man3/pcre16_pattern_to_host_byte_order.3
+ln -sf pcre_refcount.3			 /workspace/destdir/share/man/man3/pcre16_refcount.3
+ln -sf pcre_study.3			 /workspace/destdir/share/man/man3/pcre16_study.3
+ln -sf pcre_utf16_to_host_byte_order.3	 /workspace/destdir/share/man/man3/pcre16_utf16_to_host_byte_order.3
+ln -sf pcre_version.3			 /workspace/destdir/share/man/man3/pcre16_version.3
+ln -sf pcre_assign_jit_stack.3		 /workspace/destdir/share/man/man3/pcre32_assign_jit_stack.3
+ln -sf pcre_compile.3			 /workspace/destdir/share/man/man3/pcre32_compile.3
+ln -sf pcre_compile2.3			 /workspace/destdir/share/man/man3/pcre32_compile2.3
+ln -sf pcre_config.3			 /workspace/destdir/share/man/man3/pcre32_config.3
+ln -sf pcre_copy_named_substring.3	 /workspace/destdir/share/man/man3/pcre32_copy_named_substring.3
+ln -sf pcre_copy_substring.3		 /workspace/destdir/share/man/man3/pcre32_copy_substring.3
+ln -sf pcre_dfa_exec.3			 /workspace/destdir/share/man/man3/pcre32_dfa_exec.3
+ln -sf pcre_exec.3			 /workspace/destdir/share/man/man3/pcre32_exec.3
+ln -sf pcre_free_study.3		 /workspace/destdir/share/man/man3/pcre32_free_study.3
+ln -sf pcre_free_substring.3		 /workspace/destdir/share/man/man3/pcre32_free_substring.3
+ln -sf pcre_free_substring_list.3	 /workspace/destdir/share/man/man3/pcre32_free_substring_list.3
+ln -sf pcre_fullinfo.3			 /workspace/destdir/share/man/man3/pcre32_fullinfo.3
+ln -sf pcre_get_named_substring.3	 /workspace/destdir/share/man/man3/pcre32_get_named_substring.3
+ln -sf pcre_get_stringnumber.3		 /workspace/destdir/share/man/man3/pcre32_get_stringnumber.3
+ln -sf pcre_get_stringtable_entries.3	 /workspace/destdir/share/man/man3/pcre32_get_stringtable_entries.3
+ln -sf pcre_get_substring.3		 /workspace/destdir/share/man/man3/pcre32_get_substring.3
+ln -sf pcre_get_substring_list.3	 /workspace/destdir/share/man/man3/pcre32_get_substring_list.3
+ln -sf pcre_jit_exec.3			 /workspace/destdir/share/man/man3/pcre32_jit_exec.3
+ln -sf pcre_jit_stack_alloc.3		 /workspace/destdir/share/man/man3/pcre32_jit_stack_alloc.3
+ln -sf pcre_jit_stack_free.3		 /workspace/destdir/share/man/man3/pcre32_jit_stack_free.3
+ln -sf pcre_maketables.3		 /workspace/destdir/share/man/man3/pcre32_maketables.3
+ln -sf pcre_pattern_to_host_byte_order.3 /workspace/destdir/share/man/man3/pcre32_pattern_to_host_byte_order.3
+ln -sf pcre_refcount.3			 /workspace/destdir/share/man/man3/pcre32_refcount.3
+ln -sf pcre_study.3			 /workspace/destdir/share/man/man3/pcre32_study.3
+ln -sf pcre_utf32_to_host_byte_order.3	 /workspace/destdir/share/man/man3/pcre32_utf32_to_host_byte_order.3
+ln -sf pcre_version.3			 /workspace/destdir/share/man/man3/pcre32_version.3
+make[3]: Leaving directory '/workspace/srcdir/pcre-8.42'
+make[2]: Leaving directory '/workspace/srcdir/pcre-8.42'
+make[1]: Leaving directory '/workspace/srcdir/pcre-8.42'
+ ---> source "$_script"
+Installing license file "/workspace/srcdir/pcre-8.42/LICENCE" to "/workspace/destdir/share/licenses/PCRE/LICENCE"...
+Installing license file "/workspace/srcdir/pcre-8.42/COPYING" to "/workspace/destdir/share/licenses/PCRE/COPYING"...
+Child Process exited, exit code 0

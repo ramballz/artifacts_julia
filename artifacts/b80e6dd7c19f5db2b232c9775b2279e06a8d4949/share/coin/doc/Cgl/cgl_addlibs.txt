@@ -1,0 +1,1 @@
+-L/workspace/destdir/lib -lCgl -lOsiClp -lClp -lOsi -lCoinUtils -lOsi -lCoinUtils -lCoinUtils

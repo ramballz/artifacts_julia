@@ -1,0 +1,1 @@
+-L/workspace/destdir/lib -lClp -L/workspace/destdir/lib -ldmumps -lzmumps -lcmumps -lsmumps -lmumps_common -lmpiseq -lpord -lmetis -lopenblas -lgfortran -lpthread -lCoinUtils

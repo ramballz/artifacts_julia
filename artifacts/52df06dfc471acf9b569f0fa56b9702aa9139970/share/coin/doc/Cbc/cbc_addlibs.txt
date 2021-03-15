@@ -1,0 +1,1 @@
+-L/workspace/destdir/lib -lCbcSolver -lCbc -lClp -lOsiClp -lCoinUtils -lCgl -lClp -lOsiClp -lOsi -lCoinUtils CBCGENERIC_LIBS_INSTALLED=-lCgl -lClp -lOsiClp -lOsi -lCoinUtils CBCGENERIC_LIBS_INSTALLED=-lClp -lOsiClp -lCoinUtils

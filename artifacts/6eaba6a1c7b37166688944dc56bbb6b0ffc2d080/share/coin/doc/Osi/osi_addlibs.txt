@@ -1,0 +1,1 @@
+-L/workspace/destdir/lib -lOsi -lCoinUtils

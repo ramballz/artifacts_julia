@@ -1,0 +1,12 @@
+prefix=/workspace/destdir
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include/coin
+
+Name: CGL
+Description: COIN-OR Cut Generation Library
+URL: https://projects.coin-or.org/Cgl
+Version: 0.60.2
+Libs: -L${libdir} -lCgl -lOsiClp -lClp -lOsi -lCoinUtils -lOsi -lCoinUtils -lCoinUtils 
+Cflags: -I${includedir}
+Requires: 
